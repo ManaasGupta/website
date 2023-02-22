@@ -11,16 +11,19 @@
       crossorigin="anonymous"
     />
     <style>
-        #banner{
-            height:'800px';
-            width:100%;
-        }
+      #banner {
+        height: "800px";
+        width: 100%;
+      }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1  class="text-center mt-2 mb-4">Jovian Carrers</h1>
-      <img class="img-thumbnail img-fluid banner" src="http://127.0.0.1:5000/static/banner.jpg" />
+      <h1 class="text-center mt-2 mb-4">{{company}} Carrers</h1>
+      <img
+        class="img-thumbnail img-fluid banner"
+        src="http://127.0.0.1:5000/static/banner.jpg"
+      />
       <h2 class="text-center mt-2 mb-4">About Jovian</h2>
       <p class="lead">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -91,10 +94,12 @@
         purus. In arcu cursus euismod quis viverra. Nunc congue nisi vitae
         suscipit tellus mauris a diam. Pretium lectus quam id leo.
       </p>
-      <h2 class="text-center mt-2 mb-4">Jovia Jobs</h2>
-      <p>TODO - Show the Jobs here</p>
+      <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+      <div>{% for job in jobs %} {% include 'jobitem.html' %} {% endfor %}</div>
       <div class="text-center mt-2 mb-4">
-        <button type="button" class="btn btn-outline-dark btn-lg">Contact Us</button>
+        <button type="button" class="btn btn-outline-dark btn-lg">
+          Contact Us
+        </button>
         <p class="mt-2">Copyright 2022 Jovian</p>
       </div>
     </div>
